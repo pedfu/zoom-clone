@@ -85,16 +85,16 @@ const toggleMute = () => {
     const enabled = myVideoStream.getAudioTracks()[0].enabled;
     let html;
     if(enabled) {
-        myVideoStream.getAudioTracks()[0].enabled = false;
+        myVideoStream.getAudioTracks()[0].enabled = false;        
         html = `
-            <i class='fas fa-microphone'></i>
-            <span>Mute</span>
+            <i class='fas fa-microphone-slash'></i>
+            <span>Unmute</span>
         `
         document.querySelector('.main__mute_button').innerHTML = html
     } else {
         html = `
-            <i class='fas fa-microphone-slash'></i>
-            <span>Unmute</span>
+            <i class='fas fa-microphone'></i>
+            <span>Mute</span>
         `
         document.querySelector('.main__mute_button').innerHTML = html;
         myVideoStream.getAudioTracks()[0].enabled = true;
